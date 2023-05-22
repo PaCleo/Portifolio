@@ -1,0 +1,38 @@
+#card {
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+    padding: 10px;
+    height: 460px;
+    margin-bottom: 20px;
+}
+
+#card:hover{
+    background-color: rgb(101, 80, 121);
+}
+
+#card h4{
+    font-size: 22px;
+    margin: 5px;
+}
+
+#card p{
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 26px;
+}
+
+#card button{
+    background-color: rgb(31, 31, 41);
+    height: 30px;
+    color: white;
+    font-size: 16px;
+    margin-top: auto;
+    border-color: blueviolet;
+    padding: 5px;
+}
+
+#card img{
+    height: 237px;
+}
