@@ -15,6 +15,7 @@ import amazon from '../img/amazon.png';
 import realState from '../img/realState.png';
 import baker from '../img/baker.png';
 import hotel from '../img/hotel.png';
+import branding from '../img/design.png';
 
 function Project() {
 
@@ -45,42 +46,37 @@ function Project() {
             text: "Imobiliaria Santos is a Website with just hmtl and css created for my study."
         },
         {
+            title: "Branding design",
+            image: branding,
+            text: "Branding design is a website where i started working with react, basically is a static website but have the button to turn to darkmode and lightmode."
+        },
+        {
+            title: "Secret Hotel",
+            image: hotel,
+            text: "Secret Hotel is a Hotel in Angra dos Reis Brazil, this a website of a hotel that i did to improve my css and html, he has 2 pages, the home and the bedrooms."
+        },
+        {
             title: "Bakery Plus",
             image: baker,
             text: "Bakery Plus is a website with hmlt and css created in one of the courses that i did."
-        },
-        {
-            title: "Secret Hotel",
-            image: hotel,
-            text: "Secret Hotel is a Hotel in Angra dos Reis Brazil, this a website of a hotel that i did to improve my css and html, he has 2 pages, the home and the bedrooms."
-        },
-        {
-            title: "Secret Hotel",
-            image: hotel,
-            text: "Secret Hotel is a Hotel in Angra dos Reis Brazil, this a website of a hotel that i did to improve my css and html, he has 2 pages, the home and the bedrooms."
-        },
-        {
-            title: "Secret Hotel",
-            image: hotel,
-            text: "Secret Hotel is a Hotel in Angra dos Reis Brazil, this a website of a hotel that i did to improve my css and html, he has 2 pages, the home and the bedrooms."
-        },
-        {
-            title: "Secret Hotel",
-            image: hotel,
-            text: "Secret Hotel is a Hotel in Angra dos Reis Brazil, this a website of a hotel that i did to improve my css and html, he has 2 pages, the home and the bedrooms."
-        },
+        }
+        
     ];
+
 
     // define number of cards per page
     const cardsPerPage = 6;
 
-    // Defina o estado inicial
+    // Define the inicial state
     const [currentPage, setCurrentPage] = useState(0);
 
     // make the calculation of the indice of the pages to show
     const startIndex = currentPage * cardsPerPage;
     const endIndex = startIndex + cardsPerPage;
+
+
     const renderCards = () => {
+
         return (
             <div className='card-container'>
                 {cardList.slice(startIndex, endIndex).map((card, index) => (
@@ -99,27 +95,27 @@ function Project() {
     const renderNavigationButtons = () => {
         const hasPreviousPage = currentPage > 0;
         const hasNextPage = endIndex < cardList.length;
-      
+
         return (
-          <div className="navigation-buttons">
-            <button onClick={goToPreviousPage} disabled={!hasPreviousPage}>
-              Previous
-            </button>
-            <button onClick={goToNextPage} disabled={!hasNextPage}>
-              Next
-            </button>
-          </div>
+            <div className="navigation-buttons">
+                <button onClick={goToPreviousPage} disabled={!hasPreviousPage}>
+                    Previous
+                </button>
+                <button onClick={goToNextPage} disabled={!hasNextPage}>
+                    Next
+                </button>
+            </div>
         );
-      };
+    };
 
     const goToPreviousPage = () => {
         setCurrentPage(currentPage - 1);
-      };
-    
-      const goToNextPage = () => {
+    };
+
+    const goToNextPage = () => {
         setCurrentPage(currentPage + 1);
-      };
-    
+    };
+
 
     function sendEmail(email) {
         window.location.href = `mailto:${email}`;
@@ -154,9 +150,7 @@ function Project() {
                     <div className="filter">
                         <h4>PROJECTS</h4>
                         <div className="box-h5">
-                            <h5>ALL</h5>
-                            <h5>HTML&CSS</h5>
-                            <h5>JAVASCRIPT</h5>
+                            <h5>All projects are hosted on AWS instances, database and api as well.</h5>
                         </div>
                     </div>
                 </div>

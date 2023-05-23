@@ -1,13 +1,13 @@
-.body{
+.body {
     color: white;
     background-color: #101220;
 }
 
-.max-limit{
+.max-limit {
     width: 100%;
-    max-width: 1120px;
 }
-.about-me{
+
+.about-me {
     background-image: url('../img/pactechbody2.png');
     background-repeat: no-repeat;
     background-size: cover;
@@ -15,55 +15,60 @@
     height: 600px;
 }
 
-.about-me h2{
+.about-me h2 {
     padding-top: 100px;
-    padding-right: 400px;
+    padding-right: auto;
+    padding-right: auto;
     color: blueviolet;
     text-align: center;
     font-size: 68px;
 }
 
-.introducing{
+.introducing {
     width: 850px;
     padding-top: 20px;
-    margin-left: 600px;
+    margin: auto;
 }
 
-.introducing p{
-    text-align: left;
+.introducing p {
+    text-align:justify;
     font-size: 22px;
 }
 
-.project{
+.project {
     width: 1120px;
-    margin-left: 400px;
+    margin: auto;
 }
 
-.box-filter{
+.box-filter {
     background-color: rgb(31, 31, 41);
 }
 
-.filter{
+.filter {
     display: flex;
     padding: 20px;
+    height: 70px;
+    align-items: center;
+    justify-content: center;
+    text-align: justify;
 }
 
-.box-h5{
+.box-h5 {
     display: flex;
-    padding-top: 2px;
+    height: 30px;
+    margin-left: 10px;
+    align-items: center;
 }
 
-.filter h4,h5{
+.filter h4 {
+    font-size: 20px;
     padding-left: 20px;
 }
 
-.filter h4{
-    font-size: 18px;
+.box-h5 h5{
+    font-size: 16px;
 }
 
-.filter h5{
-    font-size: 15px;
-}
 
 .box-projects {
     padding-top: 30px;
@@ -76,30 +81,30 @@
     justify-content: center;
 }
 
-.contact{
+.contact {
     margin-top: 50px;
     display: flex;
     justify-content: center;
     padding-bottom: 50px;
 }
 
-.box-mail{
+.box-mail {
     padding-right: 400px;
 }
 
-.mail{
+.mail {
     padding-top: 20px;
 }
 
-.flex{
+.flex {
     display: flex;
 }
 
-.contact p{
+.contact p {
     padding-left: 5px;
 }
 
-.pointer{
+.pointer {
     cursor: pointer;
 }
 
@@ -107,9 +112,9 @@
     display: flex;
     justify-content: center;
     margin-top: 20px;
-    
-  }
-  
+
+}
+
 .navigation-buttons button {
     width: 100px;
     margin: 0 10px;
@@ -119,3 +124,54 @@
     border-color: blueviolet;
 }
 
+@media screen and (max-width: 1280px) {
+    .about-me h2{
+        padding: auto;
+    }
+    .introducing{
+        margin-left: 250px;
+    }
+    .project{
+        width: 1280px;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .about-me h2{
+        padding-right: 0px;
+    }
+    .introducing{
+        margin: 0px auto;
+        width: 600px;
+    }
+    .project{
+        width: 1024px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .introducing{
+        width: 400px;
+    }
+    .project{
+        width: auto;
+    }
+    #card{
+        width: 400px;
+    }
+    .box-mail{
+        padding: 0px;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .introducing{
+        width: 360px; 
+    }
+    .about-me h2{
+        font-size: 48px;
+    }
+    .filter{
+        flex-direction: column;
+    }
+}
