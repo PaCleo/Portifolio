@@ -1,3 +1,6 @@
+Hello, this is my website that i use to show my projects, you will find the code in the Front if you want to read how i code, always open to feedbacks if you have anything to add dm me.
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
