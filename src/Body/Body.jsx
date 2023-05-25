@@ -1,5 +1,5 @@
 import Card from '../Card/Card';
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 import './Body.css';
 import LocationOnIcon from '@mui/icons-material/LocationOn';
 import CallIcon from '@mui/icons-material/Call';
@@ -17,7 +17,11 @@ import baker from '../img/baker.png';
 import hotel from '../img/hotel.png';
 import branding from '../img/design.png';
 
-function Project() {
+function Body() {
+    const aboutMeRef = useRef(null);
+    const projectRef = useRef(null);
+    const contactRef = useRef(null);
+
 
     const cardList = [
         {
@@ -133,7 +137,7 @@ function Project() {
 
     return (
         <div className="body">
-            <div className="about-me" id="about-me" >
+            <div className="about-me" ref={aboutMeRef} >
                 <h2>ABOUT ME</h2>
                 <div className="introducing">
                     <p>
@@ -145,7 +149,7 @@ function Project() {
                 </div>
             </div>
 
-            <div className="project">
+            <div className="project" ref={projectRef}>
                 <div className="box-filter">
                     <div className="filter">
                         <h4>PROJECTS</h4>
@@ -163,7 +167,7 @@ function Project() {
                 </div>
             </div>
 
-            <div className="contact" id="contact">
+            <div className="contact" ref={contactRef}>
                 <div className='box-mail'>
                     <div className='flex'>
                         <LocationOnIcon />
@@ -189,4 +193,4 @@ function Project() {
     );
 }
 
-export default Project;
+export default Body;

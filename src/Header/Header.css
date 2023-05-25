@@ -13,11 +13,13 @@
     padding-right: 400px;
     width: 100%;
     justify-content: space-between;
+    position: sticky;
 }
 
 .logo {
     width: 200px;
     height: 100px;
+    cursor: pointer;
 }
 
 .organizer-link{

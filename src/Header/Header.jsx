@@ -1,23 +1,21 @@
 import React from "react";
+import { Link } from 'react-scroll';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import InstagramIcon from '@mui/icons-material/Instagram';
 import pactech from '../img/pactech2.png';
 import './Header.css';
 
-function Header(props) {
-    function handleNavigation(sectionId) {
-    if (sectionId === "about-me") {
-        props.aboutMeRef.current.scrollIntoView({ behavior: "smooth" });
-      } else if(sectionId === "contact"){
-        props.aboutMeContact.current.scrollIntoView({ behavior: "smooth" });
-      }
-    }
+function Header() {
+
+    const scrollToTop = () => {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    };
 
     return (
         <header className="header">
             <div className="container-logo">
-                <img src={pactech} alt="Logo" className="logo" />
+                <img src={pactech} alt="Logo" className="logo" onClick={scrollToTop} />
             </div>
 
             <div className="organizer-link">
@@ -36,9 +34,9 @@ function Header(props) {
                 </div>
 
                 <div className="container-link">
-                    <div className="link" onClick={() => handleNavigation("about-me")}>About me</div>
-                    <div className="link" onClick={() => handleNavigation("Curriculum")}>Curriculum</div>
-                    <div className="link" onClick={() => handleNavigation("contact")}>Contact</div>
+                    <Link className="link" to="about-me" smooth={true} duration={500}>About me</Link>
+                    <Link className="link" to="project" smooth={true} duration={500}>Projects</Link>
+                    <Link className="link" to="contact" smooth={true} duration={500}>Contact</Link>
                 </div>
             </div>
         </header>
