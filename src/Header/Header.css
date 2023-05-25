@@ -79,9 +79,10 @@
     }
 }
 
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 450px) {
     .header{
         flex-direction: column;
         height: auto;
+        position:static;
     }
 }

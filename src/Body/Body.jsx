@@ -32,12 +32,14 @@ function Body() {
         {
             title: "Travel Agency",
             image: agencia,
-            text: "This is a travel agency using just html and css, here is just a web page with no api."
+            text: "This is a travel agency using just html and css, here is just a web page with no api.",
+            link: "http://travel.pactech.dev.br"
         },
         {
             title: "Medical Clinic",
             image: clinic,
-            text: "This website is a Medical clinic, created with hmtl and css only, and have 2 pages, the home and one to see the schedule of the doctors."
+            text: "This website is a Medical clinic, created with hmtl and css only, and have 2 pages, the home and one to see the schedule of the doctors.",
+            link: "http://clinic.pactech.dev.br"
         },
         {
             title: "Amazon Clone",
@@ -89,6 +91,7 @@ function Body() {
                         title={card.title}
                         image={card.image}
                         text={card.text}
+                        link={card.link}
                     />
 
                 ))}
